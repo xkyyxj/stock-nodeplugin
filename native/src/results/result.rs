@@ -1,17 +1,17 @@
-pub trait result {
+pub trait Result {
     //fn new() -> Self;
 
-    fn to_string() -> Option<String>;
+    fn to_string(&self) -> Option<String>;
 }
 
-pub struct in_low {
+pub struct InLow {
     pk_low: i32,
     ts_code: Option<String>,
     ts_name: Option<String>,
     date: Option<String>
 }
 
-pub struct stock_base_info {
+pub struct StockBaseInfo {
     trade_date: Option<String>,
     ts_code: Option<String>,
     open: f64,
@@ -25,7 +25,9 @@ pub struct stock_base_info {
     pct_chg: f64
 }
 
-impl result for in_low {
-
+impl Result for InLow {
+    fn to_string(&self) -> Option<String> {
+        unimplemented!()
+    }
 }
 
